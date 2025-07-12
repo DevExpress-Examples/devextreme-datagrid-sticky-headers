@@ -12,12 +12,12 @@
         .AllowColumnResizing(true)
         .Columns(columns =>
         {
-            columns.AddFor(m => m.FirstName).Fixed(true).Width(80).FixedPosition(HorizontalEdge.Left);
+            columns.AddFor(m => m.FirstName).Fixed(true).Width(80).FixedPosition(FixedPosition.Left);
             columns.AddFor(m => m.LastName);
             columns.AddFor(m => m.Supervisor);
             columns.AddFor(m => m.StartedDate);
             columns.AddFor(m => m.Position);
-            columns.AddFor(m => m.Gender).Fixed(true).Width(80).FixedPosition(HorizontalEdge.Right);
+            columns.AddFor(m => m.Gender).Fixed(true).Width(80).FixedPosition(FixedPosition.Right);
             columns.AddFor(m => m.BirthDate);
         })
         .Sorting(s => s.Mode(GridSortingMode.None))
