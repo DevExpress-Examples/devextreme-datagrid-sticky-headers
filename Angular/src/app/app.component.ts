@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import DataSource from 'devextreme/data/data_source';
+import ArrayStore from 'devextreme/data/array_store';
 import { Service } from './app.service';
 
 @Component({
@@ -13,7 +14,10 @@ export class AppComponent {
 
   constructor(service: Service) {
     this.dataSource = new DataSource({
-      store: service.generateData(100),
+      store: new ArrayStore({
+        key: 'id',
+        data: service.generateData(100),
+      }),
     });
   }
 }
