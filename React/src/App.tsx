@@ -3,7 +3,7 @@ import 'devextreme/dist/css/dx.material.blue.light.compact.css';
 import DataGrid, {
   Sorting, Scrolling, LoadPanel, Selection, Column,
 } from 'devextreme-react/data-grid';
-import { generateData } from './data';
+import { generateData } from './data.tsx';
 
 const dataSource = generateData(100);
 
